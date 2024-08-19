@@ -13,6 +13,9 @@ app.post("/generate-qr", (req, res) => {
   qr_svg.pipe(res);
 });
 
+app.get("/", (req, res) => {
+  res.send("Turned on successfully");
+})
 app.listen(5000, () => {
   console.log("Server is running on http://localhost:5000");
 });
